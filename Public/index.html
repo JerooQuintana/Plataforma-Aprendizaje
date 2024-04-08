@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENDIX</title>
+    <link rel="stylesheet" href="./CSS/style_of_login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+    <div id="formulario">
+        <h1>RENDIX</h1>
+        <h2>Registro de usuarios</h2>
+        <h5>Ingrese sus datos</h5>
+        <form id="formularioRegistro">
+            <input type="text" name="nombre" placeholder="Nombre (s)" required><br>
+            <input type="text" name="apellido" placeholder="Apellidos" required><br>
+            <input type="email" name="email" placeholder="Correo electrónico" required><br>
+            <input type="text" name="DNI" placeholder="DNI" required><br>
+            <input type="password" name="password" placeholder="Contraseña" required><br>
+            <select name="perfil" id="perfil" required>
+                <option value="">Selecciona tu perfil</option>
+                <option value="alumno">Alumno</option>
+                <option value="tutor">Tutor</option>
+                <option value="profesor">Profesor</option>
+            </select><br>
+            <div id="checkbox">
+                <input type="checkbox" id="cb-acepto" name="terminos" required> 
+                <label for="cb-acepto">Acepto los Términos y Condiciones</label><br>
+            </div>
+            <button type="submit">Registrarse</button>
+        </form>
+        
+    </div>
+    <div>
+        <img id="man-with-computer" src="./images/Telecommuting-pana 1.svg" alt="man with computer">
+    </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -12,20 +12,24 @@ exports.obtenerPadres = async (req, res) =>{
     }
 };
 
-exports.crearPadre = async (req, res) =>{
-    const error = validationResult(req);
-    if(!error.isEmpty()){
-        return res.status(400).json({errores: error.array()});
+exports.crearPadre = async (req, res) => {
+    const errores = validationResult(req);
+    if (!errores.isEmpty()) {
+        return res.status(400).json({ errores: errores.array() });
     }
-    try{
+    try {
         let padre = new Padre(req.body);
         await padre.save();
         res.json(padre);
-    }
-    catch(error){
-        console.error(error);
-        if (!res.headersSent) { // Verificar si la respuesta ya fue enviada
-            res.status(500).send('Hubo un error');
+    } catch (error) {
+        if (error.code === 11000) {
+            const campoDuplicado = Object.keys(error.keyPattern)[0];
+            res.status(400).json({ mensaje: `El campo ${campoDuplicado} ya está en uso.` });
+        } else {
+            console.error(error);
+            if (!res.headersSent) {
+                res.status(500).send('Hubo un error en el servidor.');
+            }
         }
     }
 };

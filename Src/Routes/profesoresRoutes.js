@@ -1,15 +1,17 @@
 const express = require('express');
-const {body, validationResult } = require('express-validator');
+const {check, validationResult } = require('express-validator');
 const router = express.Router();
 
 const profesoresController = require('../Controllers/profesoresController');
 
 router.post(
-    '/',
+    '/profesores',
     [
-        body('nombre').not().isEmpty().withMessage('el nombre es obligatorio'),
-        body('email').isEmail().withMessage('debe ser un email valido'),
-        body('password').isLength({min: 6}).withMessage('la contraseña debe tener como minimo 6 caracteres')
+        check('nombre', 'El nombre es obligatorio').not().isEmpty(),
+        check('apellido', 'El apellido es obligatorio').not().isEmpty(),
+        check('email', 'Debe ser un email válido').isEmail(),
+        check('DNI', 'El DNI debe ser numérico y de 8 dígitos').isNumeric().isLength({ min: 8, max: 8 }),
+        check('password', 'La contraseña debe tener al menos 6 caracteres').isLength({ min: 6 }),
     ],
     profesoresController.crearProfesor
 );

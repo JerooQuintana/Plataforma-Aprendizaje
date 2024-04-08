@@ -1,16 +1,18 @@
 const express = require('express');
-const { body, validationResult } = require('express-validator');
+const { check, validationResult } = require('express-validator');
 const router = express.Router();
 // Importar el controlador de estudiantes
 const estudiantesController = require('../Controllers/estudiantesController');
 
 // validar ruta para crear un nuevo estudiante
 router.post(
-    '/',
+    '/estudiantes',
     [
-        body('nombre').not().isEmpty().withMessage('el nombre es obligatorio'),
-        body('edad').isNumeric().withMessage('la edad es obligatoria'),
-        body('nivel').not().isEmpty().withMessage('el nivel es obligatorio')
+        check('nombre', 'El nombre es obligatorio').not().isEmpty(),
+        check('apellido', 'El apellido es obligatorio').not().isEmpty(),
+        check('email', 'Debe ser un email válido').isEmail(),
+        check('DNI', 'El DNI debe ser numérico y de 8 dígitos').isNumeric().isLength({ min: 8, max: 8 }),
+        check('password', 'La contraseña debe tener al menos 6 caracteres').isLength({ min: 6 }),
     ],
     estudiantesController.crearEstudiante
 );

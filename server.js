@@ -6,6 +6,9 @@ const app = express();
 const Port = 3000;
 
 app.use(express.json());
+
+app.use(express.static('Public'));
+
 app.get('/', (req, res)=>{
     res.send('hola plataforma de aprendizaje adaptivo!');
 });

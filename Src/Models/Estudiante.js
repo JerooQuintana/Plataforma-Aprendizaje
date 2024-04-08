@@ -5,23 +5,28 @@ const estudianteSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    edad:{
-        type: Number,
+    apellido: {
+        type: String,
         required: true
     },
+    email: {
+        type: String,
+        required: true,
+        unique: true
+      },
+      DNI:{
+        type: Number,
+        required: true,
+        unique: true
+      },
+    password: {
+        type: String,
+        required: true
+      },
+    
     nivel:{
         type: String,
         require: true
     },
-    estiloAprendizaje:{
-        type: String,
-        enum:['Visual', 'Auditivo'],
-        required: false
-    },
-    progreso: {
-        type: Map,
-        of: Number,
-        required: false
-    }
 });
 module.exports = mongoose.model('Estudiante', estudianteSchema);

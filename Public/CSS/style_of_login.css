@@ -1,70 +1,63 @@
-body{
-    height: 100%;
-    overflow: hidden;
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url(../images/olas.svg);
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden; /* Previene el desbordamiento horizontal */
+}
+
+#container {
+  display: flex;
+  justify-content: flex-start; /* Alinea el contenido a la izquierda para desktop */
+  align-items: center;
+  min-height: 100vh;
+  padding-left: 5%; /* Espacio desde el borde izquierdo para desktop */
+}
+
+#formulario {
+  width: 400px; /* Tamaño fijo para desktop */
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 150px; /* Logo un poco más grande */
+  height: auto;
+  margin-bottom: 20px; /* Espacio debajo del logo */
+}
+
+#formulario input, select, button {
+  width: calc(100% - 30px); /* Ajusta el ancho considerando el padding */
+  margin: 15px 0; /* Separación aumentada entre inputs */
+  padding: 10px; /* Espacio interior para los inputs */
+}
+
+#man-with-computer {
+  width: 50%; /* Ajuste inicial para desktop */
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column; /* Cambio a columna en pantallas más pequeñas */
+    align-items: center; /* Centra el contenido */
+    padding-left: 0; /* Remueve el padding izquierdo */
+    overflow-y: auto; /* Permite desplazamiento vertical si el contenido excede la altura de la pantalla */
+    min-height: initial;
+    height: auto; /* Ajusta la altura según el contenido */
   }
-  
-  *{
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
+
+  #formulario {
+    width: 80%; /* Más ancho en pantallas pequeñas */
   }
-  
-  #man-with-computer{
-    position: relative;
-    bottom: 900px; left: 900px;
+
+  #man-with-computer {
+    display: none; /* Oculta la imagen en dispositivos móviles */
   }
-  
-  #container{
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../images/olas.svg);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  #formulario{
-    height: 100%;
-    width: 400px;
-    padding: 100px;
-    text-align: center;
-  }
-  
-  #formulario h2{
-    color: cadetblue;
-    font-weight: 800;
-  }
-  
-    #formulario input, select{
-    width: 300px;
-    height: 30px;
-    border-color: grey;
-    border-style: solid;
-    border-radius: 5px;
-    padding-left: 15px;
-    }
-  
-  #formulario #checkbox{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 5px;
-  }
-  
-    #formulario #cb-acepto{
-    width: 30px;
-    }
-  
-    #formulario button{
-    color: white;
-    background-color: cadetblue;
-    border-style: none;
-    border-radius: 50px;
-    height: 45px;  
-    }
-  
+}

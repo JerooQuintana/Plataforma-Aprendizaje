@@ -6,25 +6,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         const formData = new FormData(formulario);
         const data = Object.fromEntries(formData.entries());
-        // Determinar el endpoint basado en el perfil seleccionado
+        
         let endpoint = '';
         switch (data.perfil) {
             case 'alumno':
-                endpoint = '/api/estudiantes';
+                endpoint = 'http://localhost:3000/api/estudiantes';
                 break;
             case 'tutor':
-                // Asumiendo que tutor y padre son equivalentes
-                endpoint = '/api/padres';
+                endpoint = 'http://localhost:3000/api/padres';
                 break;
             case 'profesor':
-                endpoint = '/api/profesores';
+                endpoint = 'http://localhost:3000/api/profesores';
                 break;
             default:
                 console.error('Perfil no válido');
                 return;
         }
 
-        // Enviar la solicitud al servidor
         fetch(endpoint, {
             method: 'POST',
             headers: {
@@ -32,13 +30,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
             },
             body: JSON.stringify(data),
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                // Manejar las respuestas no exitosas, incluyendo el lanzamiento de un error para entrar en el catch
+                throw new Error(`HTTP error! status: ${response.status}`);
+            } else {
+                return response.json(); // Solo intenta convertir a JSON si la respuesta fue exitosa
+            }
+        })
         .then(data => {
             console.log('Success:', data);
             // Aquí puedes redirigir al usuario o mostrar algún mensaje de éxito
         })
         .catch((error) => {
             console.error('Error:', error);
+            // Aquí puedes manejar errores, por ejemplo, mostrar un mensaje de error en la interfaz
         });
     });
 });

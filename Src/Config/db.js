@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const dbConnection = async () => {
   try {
-    await mongoose.connect('mongodb+srv://jeroquintana18:locl1206@cluster0.xow5jup.mongodb.net/Plataforma-aprendizaje-DB');
+        await mongoose.connect(process.env.MONGO_DB_URI);
     console.log('DB Online');
   } catch (error) {
     console.error(error);

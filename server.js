@@ -1,3 +1,4 @@
+require('dotenv').config();
 const dbConnection = require('./Src/Config/db');
 dbConnection();
 

@@ -47,4 +47,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             // Aquí puedes manejar errores, por ejemplo, mostrar un mensaje de error en la interfaz
         });
     });
+
+    
 });

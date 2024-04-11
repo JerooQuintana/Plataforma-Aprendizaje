@@ -1,6 +1,7 @@
 const { validationResult } = require('express-validator');
 const Estudiante = require('../Models/Estudiante');
 
+
 exports.obtenerEstudiantes = async (req, res)=>{
     try{
         const estudiantes = await Estudiante.find();

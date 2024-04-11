@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RENDIX</title>
+    <link rel="icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="../CSS/style_of_login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,23 +16,26 @@
         <img class="logo" src="../images/img-logo.png" alt="logo">
         <h2>Iniciar sesión</h2>
         <h5>Ingrese sus datos</h5>
-            <form action="form">
-                <select name="perfil" id="perfil" form="Selecciona tu perfil" required>
-                    <option value="invalid" aria-invalid="false">Selecciona tu perfil</option>
-                    <option value="alumno">Alumno</option>
-                    <option value="tutor">Tutor</option>
-                    <option value="profesor">Profesor</option>
-                </select><br></br>
-                <input type="text" placeholder="DNI" required><br></br>
-                <input type="password" placeholder="Contraseña" required><br></br>
-                <div class="checkbox"><input type="checkbox" id="cb-acepto" required> <label for="cb-acepto">Recordar datos</label><br></br></div>
-                <h5 id="recuperar-contraseña">¿Olvidaste tu contraseña?</h5>
-                <button type="button">Acceder</button>
-            </form>
+        <form id="loginForm">
+            <select name="perfil" id="perfil" required>
+                <option value="">Selecciona tu perfil</option>
+                <option value="estudiantes">estudiantes</option>
+                <option value="tutor">Tutor</option>
+                <option value="profesor">Profesor</option>
+            </select><br><br>
+            <input type="text" id="dni" placeholder="DNI" required><br><br>
+            <input type="password" id="password" placeholder="Contraseña" required><br><br>
+            <div class="checkbox"><input type="checkbox" id="cb-acepto" required> <label for="cb-acepto">Recordar datos</label><br><br></div>
+            <h5 id="recuperar-contraseña">¿Olvidaste tu contraseña?</h5>
+            <button type="submit">Acceder</button>
+        </form>
     </div>
     <div>
         <img id="man-with-computer" src="../images/Telecommuting-pana 1.svg" alt="man with computer">
     </div>
     </div>
+
+    <script src="../js/sesion.js"></script>
+                
 </body>
 </html>

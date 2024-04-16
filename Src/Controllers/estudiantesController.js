@@ -49,28 +49,29 @@ exports.crearEstudiante = async (req, res, next) => {
 };
 
 exports.iniciarSesionEstudiante = async (req, res) => {
-    const { DNI, password } = req.body;
-  
-    try {
-      const estudiante = await Estudiante.findOne({ DNI });
-      if (!estudiante) {
-        return res.status(404).json({ msg: 'El usuario no existe' });
-      }
-  
-      const isMatch = await bcrypt.compare(password, estudiante.password);
-      if (!isMatch) {
-        return res.status(400).json({ msg: 'Contraseña incorrecta' });
-      }
-  
-      const token = jwt.sign(
-        { id: estudiante._id },
-        process.env.JWT_SECRET,
-        { expiresIn: '1h' }
-      );
-  
-      res.json({ token, estudiante: { nombre: estudiante.nombre, perfil: estudiante.perfil } });
-    } catch (error) {
-      console.error(error);
-      res.status(500).send('Error en el servidor');
+  const { DNI, password } = req.body;
+
+  try {
+    const estudiante = await Estudiante.findOne({ DNI });
+    if (!estudiante) {
+      return res.status(404).json({ msg: 'El usuario no existe' });
     }
-  };
+
+    const isMatch = await bcrypt.compare(password, estudiante.password);
+    if (!isMatch) {
+      return res.status(400).json({ msg: 'Contraseña incorrecta' });
+    }
+
+    const token = jwt.sign(
+      { id: estudiante._id },
+      process.env.JWT_SECRET,
+      { expiresIn: '1h' }
+    );
+
+    const usuario = { nombre: estudiante.nombre, perfil: 'estudiante' };
+    res.json({ token, usuario }); // Asegúrate de que esta línea está correctamente formateada
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error en el servidor');
+  }
+};

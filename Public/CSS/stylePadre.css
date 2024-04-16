@@ -1,0 +1,298 @@
+body{
+    margin: 0;
+}
+
+.cleaning{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+.container-fluid h1 {
+    margin-left: 2rem;
+}
+.img_logo {
+    width: 8rem;
+}
+.form-control.me-2 {
+    width: auto;
+    max-width: 10rem;
+    background-color: rgb(109, 178, 180);
+    margin-left: 3rem;
+}
+.navbar-nav a {
+    color: black;
+}
+.navbar-nav {
+    margin-right: 2rem;
+}
+.nav-item {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+.color1 {
+    color: rgb(79, 131, 133);
+}
+.color2 {
+    color: rgb(79, 131, 133);
+}
+.color3 {
+    color: rgb(79, 131, 133);
+}
+.img-estudiante {
+    width: 3.8rem;
+}
+.dropdown-item {
+    background-color: rgb(109, 178, 180) !important;
+}
+
+header{
+    width: 100%;
+    height: 150px;
+    background-color: white;
+	position: sticky;	
+}
+
+.contenido-principal{
+    width: 100%;
+    height: 100%;
+    top: 150px;
+    background:  #66B9BF;    
+}
+
+
+.material-symbols-outlined{
+    font-size:  30px;
+}
+.cont-menu{
+    width: 100%;
+    height: 100%;
+    background-image: url("./img/img-logo.png");
+    background: #07889b;
+    position: relative;
+}
+.cont-menu nav a{
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #ffffff;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #04b19a;
+}
+
+.content-principal{
+    background:  #66B9BF;
+    width: 80%;   
+    height: 100%;
+    position: relative;
+    padding-left: 40px;
+    padding-top: 50px;
+}
+.titulo{
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 100% */
+    letter-spacing: 0.15px;
+}
+.notas{
+    display: flex;
+    width: 199px;
+    height: 24px;
+    align-items: center;
+    flex-shrink: 0;
+    padding-top: 20px;
+}
+.cont-cards{
+    padding-top: 50px;
+    display: flex;
+    gap: 50px;
+}
+.card{
+    width: 194px;
+    height: 265px;
+    flex-shrink: 0;
+
+    border-radius: 10px;
+    background-color: #FFFF;    
+}
+.card-top{
+    width: 194px;
+    height: 16px;
+    flex-shrink: 0;
+    border-radius: 10px 10px 0px 0px;
+}
+.card-top1, .card-top3{
+    background: #E37222;
+}
+.card-top2, .card-top4{
+    background: #07889B;
+}
+.card-icono{
+    height: 194px;
+}
+.icono{
+    width: 60px;
+    height: 110px;
+    
+    margin-left: 0px;
+    padding-top: 50px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+.nota{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 134px;
+    width: 125px;
+}
+.cantidad{
+    width: 100%;
+    height: 110px;
+    flex-shrink: 0;
+
+    padding-top: 70px;
+    padding-right: 0px;
+    margin-left: 5px;
+
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 60% */
+    letter-spacing: 0.15px;
+}
+.cantidad-f{
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 120% */
+    letter-spacing: 0.15px; 
+    width: 100%;
+    padding-top: 80px;
+    padding-left: 10px;
+    padding-right: 0px;
+}
+.leyenda{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    width: auto;
+    height: 20px;
+
+    color: var(--Gris, rgba(0, 0, 0, 0.70));
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 17px;
+    font-style: normal;
+}
+.detalles{
+    height: 70px;
+    width: auto;
+    padding-top: 0px;
+    padding-top: 10px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.detalle{
+    padding-left: 0px;
+    padding-left: 10;
+    text-align: center;
+    width: auto;
+}
+.detalle-d{
+    padding-left: 0px;
+    padding-left: 10px;
+    width: auto;
+}
+
+.titulo-comunicado{
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.15px;
+
+    padding-top: 40px;
+}
+
+.icono-comunicado{
+    border-radius: 10px 10px 0px 0px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    width: 302px;
+    height: 148px;
+}
+
+.horarios{
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.15px;
+
+    padding-top: 40px;
+}
+.imangen-horario{
+    width: 521px;
+    height: 250px;
+    flex-shrink: 0;
+}
+
+.comunicado{
+    background-color: white;
+    height: 90;
+    width: 302px;
+}
+.txt-comunicado{
+    display: flex;
+    height: 70px;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px;
+    flex-shrink: 0;
+    align-self: stretch;
+
+    background-color: white;
+    width: 302px;
+}
+.text-comentary{
+    color: var(--00-on-surface-medium-emphasis, rgba(0, 0, 0, 0.60));
+
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+.leerMas{
+    background-color: white;
+    width: 302px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 0px 0px 10px 10px;
+}

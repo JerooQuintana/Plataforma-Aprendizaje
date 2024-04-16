@@ -1,5 +1,7 @@
 const Padre = require('../Models/Padre');
 const { validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 exports.obtenerPadres = async (req, res) =>{
     try{
@@ -19,6 +21,9 @@ exports.crearPadre = async (req, res) => {
     }
     try {
         let padre = new Padre(req.body);
+
+        const salt = await bcrypt.genSalt(10);
+      padre.password = await bcrypt.hash(padre.password, salt);
         await padre.save();
         res.json(padre);
     } catch (error) {
@@ -33,3 +38,30 @@ exports.crearPadre = async (req, res) => {
         }
     }
 };
+
+exports.iniciarSesionPadre = async (req, res) => {
+    const { DNI, password } = req.body;
+  
+    try {
+      const padre = await Padre.findOne({ DNI });
+      if (!padre) {
+        return res.status(404).json({ msg: 'El usuario no existe' });
+      }
+  
+      const isMatch = await bcrypt.compare(password, padre.password);
+      if (!isMatch) {
+        return res.status(400).json({ msg: 'Contraseña incorrecta' });
+      }
+  
+      const token = jwt.sign(
+        { id: padre._id },
+        process.env.JWT_SECRET,
+        { expiresIn: '1h' }
+      );
+  
+      res.json({ token, usuario: { nombre: padre.nombre, perfil: 'padre'} });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Error en el servidor');
+    }
+  };

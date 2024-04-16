@@ -11,6 +11,9 @@ router.post('/',
   body('DNI').isNumeric(),
   body('password').isLength({ min: 5 }),
 ], padresController.crearPadre);
+
+router.post('/login', padresController.iniciarSesionPadre);
+
 router.get('/', padresController.obtenerPadres);
 
 

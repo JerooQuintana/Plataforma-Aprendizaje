@@ -1,5 +1,7 @@
-const Profesor = require('../models/Profesor');
+const Profesor = require('../Models/Profesor');
 const {validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 exports.obtenerProfesores = async (req, res) => {
   try {
     const profesores = await Profesor.find();
@@ -17,6 +19,8 @@ exports.crearProfesor = async (req, res, next) => {
   }
   try {
     let profesor = new Profesor(req.body);
+    const salt = await bcrypt.genSalt(10);
+      profesor.password = await bcrypt.hash(profesor.password, salt);
     await profesor.save();
     res.json(profesor);
   } catch (error) {
@@ -30,5 +34,31 @@ exports.crearProfesor = async (req, res, next) => {
         res.status(500).send('Hubo un error en el servidor.');
       }
     }
+  }
+};
+exports.iniciarSesionProfesores = async (req, res) => {
+  const { DNI, password } = req.body;
+
+  try {
+    const profesor = await Profesor.findOne({ DNI });
+    if (!profesor) {
+      return res.status(404).json({ msg: 'El usuario no existe' });
+    }
+
+    const isMatch = await bcrypt.compare(password, profesor.password);
+    if (!isMatch) {
+      return res.status(400).json({ msg: 'Contraseña incorrecta' });
+    }
+
+    const token = jwt.sign(
+      { id: profesor._id },
+      process.env.JWT_SECRET,
+      { expiresIn: '1h' }
+    );
+
+    res.json({ token, usuario: { nombre: profesor.nombre, perfil: 'profesor'} });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error en el servidor');
   }
 };

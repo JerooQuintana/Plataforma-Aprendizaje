@@ -34,6 +34,10 @@ exports.crearEstudiante = async (req, res, next) => {
 
       // Enviar respuesta exitosa al cliente
       res.send(estudiante);
+      res.json({
+        estudiante: estudiante,
+        mensaje: `Usuario [${estudiante.nombre}] registrado con éxito!`
+      });
   } catch (error) {
       if (error.code === 11000) {
           // Manejar error de duplicidad (e.g., DNI o email ya registrado)

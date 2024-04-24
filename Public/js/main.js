@@ -8,15 +8,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const data = Object.fromEntries(formData.entries());
         
         let endpoint = '';
+        let userType = '';
         switch (data.perfil) {
             case 'alumno':
                 endpoint = 'http://localhost:3000/api/estudiantes';
+                userType = 'estudiante';
                 break;
             case 'tutor':
                 endpoint = 'http://localhost:3000/api/padres';
+                userType = 'tutor';
                 break;
             case 'profesor':
                 endpoint = 'http://localhost:3000/api/profesores';
+                userType = 'docente';
                 break;
             default:
                 console.error('Perfil no válido');
@@ -36,6 +40,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             } else {
                 return response.json(); // Solo intenta convertir a JSON si la respuesta fue exitosa
+            }
+        })
+        .then(data => {
+            console.log('Success:', data);
+            if (data.mensaje) {
+                alert(data.mensaje); // Muestra una alerta con el mensaje de éxito
+            } else {
+                alert(`Usuario ${userType} registrado con éxito!`);
             }
         })
         .then(data => {

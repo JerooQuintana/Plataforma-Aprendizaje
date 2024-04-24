@@ -22,7 +22,10 @@ exports.crearProfesor = async (req, res, next) => {
     const salt = await bcrypt.genSalt(10);
       profesor.password = await bcrypt.hash(profesor.password, salt);
     await profesor.save();
-    res.json(profesor);
+    res.json({
+      profesor: profesor,
+      mensaje: `Usuario [${profesor.nombre}] registrado con éxito!`
+    });
   } catch (error) {
     if (error.code === 11000) {
       const campoDuplicado = Object.keys(error.keyPattern)[0];

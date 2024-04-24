@@ -26,14 +26,14 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-white">
                     <div class="container-fluid">
                         <div class="row align-items-center">
-                            <div class="col">
-                                <span id="rendix_logo" style="color: #108d9e">REN</span><span id="rendix_logo" style="color: #000000">DIX</span>
-                                </h1>
-                            </div>
                             <div class="col-auto">
-                                <a class="navbar-brand" href="#">
+                                <a class="navbar-brand" href="../HTML/usuarioEstudiantes.html">
                                     <img class="img_logo_header" src="../img/img_logo2.png">
                                 </a>
+                            </div>
+                            <div class="col">
+                                <a id="inicio" href="../HTML/usuarioEstudiantes.html">
+                                <span id="rendix_logo" style="color: #108d9e">REN</span><span id="rendix_logo" style="color: #000000">DIX</span></a>
                             </div>
                         </div>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -75,14 +75,15 @@
                 <nav class="sidebar_nav">
                     <ul>
                         <li>
-                            <a href="#"><img src="../img/img_home.png" id="img_sidebar"><span class="">Inicio</span></a>
+                            <a href="../HTML/usuarioEstudiantes.html">
+                            <img src="../img/img_home.png" id="img_sidebar"><span class="">Inicio</span></a>
                         </li>
                         <li>
-                            <a href="#"><img src="../img/img_perfil.png" id="img_sidebar"><span class="">Mi perfil</span></a>
+                            <a href="https://hassalea.github.io/rendix-miperfil/"><img src="../img/img_perfil.png" id="img_sidebar"><span class="">Mi perfil</span></a>
                         </li>
                         <li>
                             <a href="#"><img src="../img/img_materias.png" id="img_sidebar"><span class="">Mis materias</span></a>
-                            <ul class="nav_flyout">
+                            <!--<ul class="nav_flyout">
                                 <li>
                                     <a href="#"> Matemáticas</a>
                                 </li>
@@ -101,11 +102,11 @@
                                 <li>
                                     <a href="#"> Seminario</a>
                                 </li>
-                            </ul>
+                            </ul>-->
                         </li>
                         <li>
                             <a href="#"><img src="../img/img_informe.png" id="img_sidebar"><span class="">Mis informes</span></a>
-                            <ul class="nav_flyout">
+                            <!--<ul class="nav_flyout">
                                 <li>
                                     <a href="#"> informes</a>
                                 </li>
@@ -121,16 +122,16 @@
                                 <li>
                                     <a href="#"> informes</a>
                                 </li>
-                            </ul>
+                            </ul>-->
                         </li>
                         <li>
                             <a href="#"><img src="../img/img_asistencia.png" id="img_sidebar"></i> <span class="">Mis asistencias</span></a>
                         </li>
                         <li>
-                            <a href="#"><img src="../img/img_calendario.png" id="img_sidebar"><span class="">Calendario escolar</span></a>
+                            <a href="../HTML/calendarizacion.html"><img src="../img/img_calendario.png" id="img_sidebar"><span class="">Calendario escolar</span></a>
                         </li>
                         <li>
-                            <a href="#"><img src="../img/img_material.png" id="img_sidebar"></i> <span class="">Material y tutoriales</span></a>
+                            <a href="../HTML/materialesEstudiantes.html"><img src="img/img_material.png" id="img_sidebar"></i> <span class="">Material y tutoriales</span></a>
                         </li>
                     </ul>
                     <img src="../img/img_logo2.png" id="img_sidebar_logo">
@@ -148,26 +149,17 @@
 
             <div class="container-banner">
                 <div class="banner_welcome">
-                    <img src="../img/img_logo.png" alt="logo de Rendix" id="banner_logo">
-                    <!--<h1> Bienvenid@ a Rendix (nombre del usuario)</h1>-->
+                    <img src="../img/img-estudiante.png" alt="logo de Rendix" id="banner_logo">
+                    <h1> ¡Bienvenid@ Laura Espinoza!</h1>
                     <p></p>
                 </div>
-                <img src="../img/img_banner.png" alt="Banner de Rendix" id="banner_img">
-            </div>
-
-            <div id="notificationContainer" class="notification-container">
-                <div class="notification-message">
-                    <p>Evento creado con éxito!</p>
-                </div>
+                <img src="../img/img-banner.png" alt="Banner de Rendix" id="banner_img">
             </div>
 
 
             <div class="container-pendiente">
                 <div class="pendiente-main">
-                    <div id="titulo"><h2>¡Binvenid@ Maria!</h2></div>
-                    <div id="notas">
-                        Mis Notas pendientes
-                    </div>
+                    <div id="titulo"><h2>Mis notas pendientes</h2></div>
                     <div class="ag-format-container">
                         <div class="ag-pendiente_box">
                             <div class="ag-pendiente_item">
@@ -206,7 +198,7 @@
                                     <span class="ag-pendiente-item_name"><!--nombre del docente--></span><br>
                                 </div>
                                 <div class="ag-pendiente-item_cal">Materia:
-                                    <span class="ag-pendiente-item_name"><!--nombre de la materia--></span>
+                                    <span class="ag-pendiente-item_name"><!--nombre de la materia--></span><br><br>
                                 </div>
                                 </a>
                             </div>
@@ -265,6 +257,7 @@
 
 
             <div class="cursos-main">
+                <div id="titulo"><h2>Mis materias</h2></div>
                 <div class="ag-format-container">
                     <div class="ag-courses_box">
 
@@ -409,7 +402,6 @@
                         <h3>Eventos Agregados</h3>
                         <ul id="eventList"></ul>
                     </div>
-                   
             </div>
             <div id="eventModal" class="modal">
                 <div class="modal-content">
@@ -423,8 +415,19 @@
                     </div>
                 </div>
             </div>
-        </div> 
+            <div id="notificationContainer" class="notification-container">
+                <div class="notification-message">
+                    <p>Evento creado con éxito!</p>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        
     </section>
+
+
         <script src="../js/funcionesEstudiantes.js"></script>
     </body>
 </html>

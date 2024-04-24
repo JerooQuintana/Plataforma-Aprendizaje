@@ -21,11 +21,13 @@ exports.crearPadre = async (req, res) => {
     }
     try {
         let padre = new Padre(req.body);
-
         const salt = await bcrypt.genSalt(10);
       padre.password = await bcrypt.hash(padre.password, salt);
         await padre.save();
-        res.json(padre);
+        res.json({
+          padre: padre,
+          mensaje: `Usuario [${padre.nombre}] registrado con éxito!`
+        });
     } catch (error) {
         if (error.code === 11000) {
             const campoDuplicado = Object.keys(error.keyPattern)[0];

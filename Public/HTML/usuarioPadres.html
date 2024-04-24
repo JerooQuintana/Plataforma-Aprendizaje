@@ -1,274 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padre</title>
-    <link rel="icon" href="./img/img-transparencia.png" type="favicon">
-    <link rel="stylesheet" href="./style.css">
+<html lang="es">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rendix</title>
+        <link rel="icon" href="../img/favicon.ico">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="../CSS/reset.css">
+        <link rel="stylesheet" href="../CSS/stylePadre.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-    <link rel="stylesheet" href="../CSS/stylePadre.css">
-</head>
-<body>
-    <div class="container-fluid cleaning">
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-white">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <h1><span class="color1">R</span><span class="color2">E</span><span class="color3">N</span>DIX
-                            </h1>
+    <body>
+        
+        <section class="sidebar-section">
+            <div class="sidebar-section-header">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <span id="rendix_logo" style="color: #108d9e">REN</span><span id="rendix_logo" style="color: #000000">DIX</span>
+                                </h1>
+                            </div>
+                            <div class="col-auto">
+                                <a class="navbar-brand" href="#">
+                                    <img class="img_logo_header" src="../img/img_logo2.png">
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-auto">
-                            <a class="navbar-brand" href="#">
-                                <img class="img_logo" src="../img/img_logo2.png" alt="img_logo">
-                            </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <form class="d-flex flex-grow-1">
+                                <input class="form-control me-2 flex-grow-1" type="search" placeholder="Buscar"
+                                    aria-label="Search">
+                            </form>
+                            <ul class="navbar-nav ms-auto flex-nowrap">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="far fa-envelope"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="far fa-bell"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="padre">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <form class="d-flex flex-grow-1">
-                            <input class="form-control me-2 flex-grow-1" type="search" placeholder="Buscar"
-                                aria-label="Search">
-                        </form>
-                        <ul class="navbar-nav ms-auto flex-nowrap">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="far fa-envelope"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="far fa-bell"></i></a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <div class="d-flex align-items-center">
-                                    <img class="img-estudiante me-2" src="../img/img-estudiante.png" alt="img-estudiante">
-                                    <div>
-                                        <strong>Laura Espinoza</strong>
-                                        <br>
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <span class="d-inline-block">Tutor</span>
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li><a class="dropdown-item" href="#">Mis datos</a></li>
-                                            <li><a class="dropdown-item" href="#">Mis tareas</a></li>
-                                            <li><a class="dropdown-item" href="#">Mis informes</a></li>
-                                        </ul>
+                </nav>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            </div>
+            
+            <aside class="sidebar">
+                <header>Menú</header>
+                <nav class="sidebar_nav">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="../img/img_home.png" id="img_sidebar"><span class="">Inicio</span></a>
+                        </li>
+                        <li>
+                            <a href="../HTML/perfil.html"><img src="../img/img_perfil.png" id="img_sidebar"><span class="">Mi perfil</span></a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <a href="#" class="dropbtn"><img src="../img/img_informe.png" id="img_sidebar"><span>Mis informes</span></a>
+                                <div class="dropdown-content">
+                                    <a href="../HTML/evaluacion.html"><span class="">Evaluaciones</span></a>
+                                    <a href="../HTML/historialAcademico.html"><span class="">Historial Academico</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../img/img_materias.png" id="img_sidebar"><span class="">Mis materias</span></a>
+                        </li>
+
+                        <li>
+                            <a href="#"><img src="../img/asistencia.png" id="img_sidebar"></i> <span class="">Mis asistencias</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../img/calendario.png" id="img_sidebar"><span class="">Calendario escolar</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../img/img_material.png" id="img_sidebar"></i> <span class="">Material y tutoriales</span></a>
+                        </li>
+                    </ul>
+                    <img src="../img/img_logo2.png" id="img_sidebar_logo">
+                </nav>
+            </aside>
+        </section>
+
+        <section class="home">
+            <div class="container-all">
+                <div class="titulos">
+                    <div class="bienvenida" ></div>
+                    <div class="notas"></div>
+                </div>
+
+                <div class="row cleaning">
+                    <div class="col-lg-6 col-md-12 col-sm-12 cards-container cleaning">
+                        <div class="card">
+                            <div class="card-top card-top1"></div>
+                            <div class="row cleaning">
+                                <div class="col-4 col-md-4 icono cleaning">
+                                    <svg class="icono-imagen" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.5002 45.8333C11.3543 45.8333 10.3738 45.4257 9.5585 44.6104C8.74322 43.7951 8.33488 42.8138 8.3335 41.6666V8.33329C8.3335 7.18746 8.74183 6.2069 9.5585 5.39163C10.3752 4.57635 11.3557 4.16801 12.5002 4.16663H29.1668L41.6668 16.6666V22.9166C40.8682 23.0902 40.1217 23.368 39.4272 23.75C38.7328 24.1319 38.0904 24.618 37.5002 25.2083L25.0002 37.6562V45.8333H12.5002ZM29.1668 45.8333V39.427L40.6772 27.9687C40.9897 27.6562 41.337 27.4305 41.7189 27.2916C42.1009 27.1527 42.4828 27.0833 42.8647 27.0833C43.2814 27.0833 43.6807 27.1618 44.0627 27.3187C44.4446 27.4757 44.7918 27.7097 45.1043 28.0208L47.0314 29.9479C47.3092 30.2604 47.5266 30.6076 47.6835 30.9895C47.8404 31.3715 47.9182 31.7534 47.9168 32.1354C47.9168 32.5173 47.8474 32.9083 47.7085 33.3083C47.5696 33.7083 47.3439 34.0638 47.0314 34.375L35.5731 45.8333H29.1668ZM42.8647 34.1666L44.7918 32.1354L42.8647 30.2083L40.8856 32.1875L42.8647 34.1666ZM27.0835 18.75H37.5002L27.0835 8.33329V18.75Z" fill="#E37222"/>
+                                    </svg>
+                                </div>
+                                <div class="col-8 col-md-8 cleaning">
+                                    <div class="row nota cleaning">
+                                        <div class="col-12 col-md-12 cantidad cleaning">1</div>
+                                        <div class="col-12 col-md-12 leyenda cleaning">Tarea pendiente</div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>            
-        </header>
-        <main class="row contenido-principal cleaning">
-            <div class="col-2 col-md-2 menu-lateral cleaning">
-                <div class="cont-menu">
-                    <nav>
-                        <a href="#">
-                            <span class="material-symbols-outlined">
-                                home
-                            </span>
-                            Inicio
-                        </a>
-                        <a href="#">
-                            <span class="material-symbols-outlined">
-                                person
-                            </span>
-                            Mis Datos
-                        </a>
-                        <a href="#">
-                            <span class="material-symbols-outlined">
-                                school
-                            </span>
-                            Mis Cursos
-                        </a>
-                        <a href="#">
-                            <span class="material-symbols-outlined">
-                                description
-                            </span>
-                            Reportes Academicos
-                        </a>
-                        <a href="#">
-                            <span class="material-symbols-outlined">
-                                calendar_month
-                            </span>
-                            Calendario Escolar
-                        </a>
-                        <a href="#">
-                            <span class="material-symbols-outlined">
-                                book
-                            </span>
-                            Material y tutoriales
-                        </a>
-                        <a href="#">
-                            <span class="material-symbols-outlined">
-                                volunteer_activism
-                            </span>
-                            Ayuda
-                        </a>
-                        <a href="#">
-                            <span class="material-symbols-outlined">
-                                mode_off_on
-                            </span>
-                            Cerrar Cesión
-                        </a>
-                    </nav>
-                </div>
-            </div>
-            <div class="col-8 col-md-8 content-principal cleaning">
-                <div class="col-12 col-md-12 titulo">
-                    <h2>
-                        ¡Binvenid@ Maria!
-                    </h2>
-                </div>
-                <div class="col-12 col-md-12 notas">
-                    Mis Notas pendientes
-                </div>
-                <div class="col-12 col-md-12 cont-cards">
-                    <div class="card">
-                        <div class="card-top card-top1"></div>
-                        <div class="row cleaning">
-                            <div class="col-4 col-md-4 icono">
-                                <svg class="icono-imagen" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.5002 45.8333C11.3543 45.8333 10.3738 45.4257 9.5585 44.6104C8.74322 43.7951 8.33488 42.8138 8.3335 41.6666V8.33329C8.3335 7.18746 8.74183 6.2069 9.5585 5.39163C10.3752 4.57635 11.3557 4.16801 12.5002 4.16663H29.1668L41.6668 16.6666V22.9166C40.8682 23.0902 40.1217 23.368 39.4272 23.75C38.7328 24.1319 38.0904 24.618 37.5002 25.2083L25.0002 37.6562V45.8333H12.5002ZM29.1668 45.8333V39.427L40.6772 27.9687C40.9897 27.6562 41.337 27.4305 41.7189 27.2916C42.1009 27.1527 42.4828 27.0833 42.8647 27.0833C43.2814 27.0833 43.6807 27.1618 44.0627 27.3187C44.4446 27.4757 44.7918 27.7097 45.1043 28.0208L47.0314 29.9479C47.3092 30.2604 47.5266 30.6076 47.6835 30.9895C47.8404 31.3715 47.9182 31.7534 47.9168 32.1354C47.9168 32.5173 47.8474 32.9083 47.7085 33.3083C47.5696 33.7083 47.3439 34.0638 47.0314 34.375L35.5731 45.8333H29.1668ZM42.8647 34.1666L44.7918 32.1354L42.8647 30.2083L40.8856 32.1875L42.8647 34.1666ZM27.0835 18.75H37.5002L27.0835 8.33329V18.75Z" fill="#E37222"/>
-                                </svg>
                             </div>
-                            <div class="col-8 col-md-8 nota">
-                                <div class="row clean-padding nota">
-                                    <div class="col-12 col-md-12 cantidad">1</div>
-                                    <div class="col-12 col-md-12 leyenda">Tarea pendiente</div>
+                            <div class="row cleaning detalles">
+                                <div class="col-6 col-md-6 detalle-izquierdo">
+                                    <p>Vence en <br> dos días</p>
+                                </div>
+                                <div class="col-6 col-md-6 detalle-derecho">
+                                    <p>Materia<br>Lenguaje</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row cleaning detalles">
-                            <div class="col-6 col-md-6 detalle">
-                                <p>Vence en <br> dos días</p>
-                            </div>
-                            <div class="col-6 col-md-6 detalle-d">
-                                <p>Materia:<br>Lenguaje</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-top card-top2"></div>
-                        <div class="row cleaning">
-                            <div class="col-4 col-md-4 icono">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M33.3332 27.0833C34.479 27.0833 35.4165 26.1458 35.4165 25V6.24996C35.4165 5.10413 34.479 4.16663 33.3332 4.16663H6.24984C5.104 4.16663 4.1665 5.10413 4.1665 6.24996V35.4166L12.4998 27.0833H33.3332ZM8.33317 25.3541V8.33329H31.2498V22.9166H10.7707L8.33317 25.3541ZM45.8332 14.5833C45.8332 13.4375 44.8957 12.5 43.7498 12.5H39.5832V31.25H12.4998V35.4166C12.4998 36.5625 13.4373 37.5 14.5832 37.5H37.4998L45.8332 45.8333V14.5833Z" fill="#07889B"/>
-                                </svg>
-                            </div>
-                            <div class="col-8 col-md-8 nota">
-                                <div class="row clean-padding nota">
-                                    <div class="col-12 col-md-12 cantidad">3</div>
-                                    <div class="col-12 col-md-12 leyenda">Mensajes de <br> profesor</div>
+                        </div>    
+                        <div class="card">
+                            <div class="card-top card-top2"></div>
+                            <div class="row cleaning">
+                                <div class="col-4 col-md-4 icono cleaning">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M33.3332 27.0833C34.479 27.0833 35.4165 26.1458 35.4165 25V6.24996C35.4165 5.10413 34.479 4.16663 33.3332 4.16663H6.24984C5.104 4.16663 4.1665 5.10413 4.1665 6.24996V35.4166L12.4998 27.0833H33.3332ZM8.33317 25.3541V8.33329H31.2498V22.9166H10.7707L8.33317 25.3541ZM45.8332 14.5833C45.8332 13.4375 44.8957 12.5 43.7498 12.5H39.5832V31.25H12.4998V35.4166C12.4998 36.5625 13.4373 37.5 14.5832 37.5H37.4998L45.8332 45.8333V14.5833Z" fill="#07889B"/>
+                                    </svg>
+                                </div>
+                                <div class="col-8 col-md-8 cleaning">
+                                    <div class="row nota cleaning">
+                                        <div class="col-12 col-md-12 cantidad cleaning">1</div>
+                                        <div class="col-12 col-md-12 leyenda cleaning">Tarea pendiente</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row cleaning detalles">
-                            <div class="col-6 col-md-6 detalle">
-                                <p>Vence en <br> dos días</p>
+                            <div class="row cleaning detalles">
+                                <div class="col-6 col-md-6 detalle-izquierdo">
+                                    <p>Vence en <br> dos días</p>
+                                </div>
+                                <div class="col-6 col-md-6 detalle-derecho">
+                                    <p>Materia<br>Lenguaje</p>
+                                </div>
                             </div>
-                            <div class="col-6 col-md-6 detalle-d">
-                                <p>Materia:<br>Matematica</p>
+                        </div>    
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 cards-container cleaning">
+                        <div class="card">
+                            <div class="card-top card-top1"></div>
+                            <div class="row cleaning">
+                                <div class="col-4 col-md-4 icono cleaning">
+                                    <svg class="icono-imagen" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.5002 45.8333C11.3543 45.8333 10.3738 45.4257 9.5585 44.6104C8.74322 43.7951 8.33488 42.8138 8.3335 41.6666V8.33329C8.3335 7.18746 8.74183 6.2069 9.5585 5.39163C10.3752 4.57635 11.3557 4.16801 12.5002 4.16663H29.1668L41.6668 16.6666V22.9166C40.8682 23.0902 40.1217 23.368 39.4272 23.75C38.7328 24.1319 38.0904 24.618 37.5002 25.2083L25.0002 37.6562V45.8333H12.5002ZM29.1668 45.8333V39.427L40.6772 27.9687C40.9897 27.6562 41.337 27.4305 41.7189 27.2916C42.1009 27.1527 42.4828 27.0833 42.8647 27.0833C43.2814 27.0833 43.6807 27.1618 44.0627 27.3187C44.4446 27.4757 44.7918 27.7097 45.1043 28.0208L47.0314 29.9479C47.3092 30.2604 47.5266 30.6076 47.6835 30.9895C47.8404 31.3715 47.9182 31.7534 47.9168 32.1354C47.9168 32.5173 47.8474 32.9083 47.7085 33.3083C47.5696 33.7083 47.3439 34.0638 47.0314 34.375L35.5731 45.8333H29.1668ZM42.8647 34.1666L44.7918 32.1354L42.8647 30.2083L40.8856 32.1875L42.8647 34.1666ZM27.0835 18.75H37.5002L27.0835 8.33329V18.75Z" fill="#E37222"/>
+                                    </svg>
+                                </div>
+                                <div class="col-8 col-md-8 cleaning">
+                                    <div class="row nota cleaning">
+                                        <div class="col-12 col-md-12 cantidad cleaning">1</div>
+                                        <div class="col-12 col-md-12 leyenda cleaning">Tarea pendiente</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row cleaning detalles">
+                                <div class="col-6 col-md-6 detalle-izquierdo">
+                                    <p>Vence en <br> dos días</p>
+                                </div>
+                                <div class="col-6 col-md-6 detalle-derecho">
+                                    <p>Materia<br>Lenguaje</p>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="card">
+                            <div class="card-top card-top2"></div>
+                            <div class="row cleaning">
+                                <div class="col-4 col-md-4 icono cleaning">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M33.3332 27.0833C34.479 27.0833 35.4165 26.1458 35.4165 25V6.24996C35.4165 5.10413 34.479 4.16663 33.3332 4.16663H6.24984C5.104 4.16663 4.1665 5.10413 4.1665 6.24996V35.4166L12.4998 27.0833H33.3332ZM8.33317 25.3541V8.33329H31.2498V22.9166H10.7707L8.33317 25.3541ZM45.8332 14.5833C45.8332 13.4375 44.8957 12.5 43.7498 12.5H39.5832V31.25H12.4998V35.4166C12.4998 36.5625 13.4373 37.5 14.5832 37.5H37.4998L45.8332 45.8333V14.5833Z" fill="#07889B"/>
+                                    </svg>
+                                </div>
+                                <div class="col-8 col-md-8 cleaning">
+                                    <div class="row nota cleaning">
+                                        <div class="col-12 col-md-12 cantidad cleaning">1</div>
+                                        <div class="col-12 col-md-12 leyenda cleaning">Tarea pendiente</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row cleaning detalles">
+                                <div class="col-6 col-md-6 detalle-izquierdo">
+                                    <p>Vence en <br> dos días</p>
+                                </div>
+                                <div class="col-6 col-md-6 detalle-derecho">
+                                    <p>Materia<br>Lenguaje</p>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+
+                <div class="row cleaning informes">
+                    <div class="col-lg-6 col-md-12 cleaning container-comunicado">
+                        <h2 class="titulo-comunicado">Comunicados de institución</h2>
+                        <div class="imagen-comunicado">
+                            <div class="icono-comunicado">
+                                <img src="../img/img-icono.jpg" alt="Imagen Comunicado" class="icono-comunicado">
+                            </div>
+                            <div class="detalle-comunicado">
+                                <div class="row cleaning comunicado"></div>
+                                    <div class="col-12 col-md-12 cleaning text-comunicado">
+                                        <p class="text-comentary">Para este miércoles 7 de abril se<br> suspende, en todo el territorio nacuil.</p>
+                                    </div>
+                                    <div class="col-12 col-md-12 cleaning leerMas">
+                                        <p>Leer Más</p>
+                                    </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-top card-top3"></div>
-                        <div class="row cleaning">
-                            <div class="col-4 col-md-4 icono">
-                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 28.2499L26.1667 32.4166L34.5 24.0833" stroke="#E37222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M38.6665 13.6666H17.8332C15.532 13.6666 13.6665 15.5321 13.6665 17.8333V38.6666C13.6665 40.9678 15.532 42.8333 17.8332 42.8333H38.6665C40.9677 42.8333 42.8332 40.9678 42.8332 38.6666V17.8333C42.8332 15.5321 40.9677 13.6666 38.6665 13.6666Z" stroke="#E37222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M5.33317 30.3333C3.0415 30.3333 1.1665 28.4583 1.1665 26.1666V5.33329C1.1665 3.04163 3.0415 1.16663 5.33317 1.16663H26.1665C28.4582 1.16663 30.3332 3.04163 30.3332 5.33329" stroke="#E37222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <div class="col-8 col-md-8 nota">
-                                <div class="row cleaning nota">
-                                    <div class="col-12 col-md-12 cantidad">2</div>
-                                    <div class="col-12 col-md-12 leyenda">Calificaciones <br> pendientes</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row cleaning detalles">
-                            <div class="col-6 col-md-6 detalle">
-                                <p>Vence en <br> dos días</p>
-                            </div>
-                            <div class="col-6 col-md-6 detalle-d">
-                                <p>Materia<br>Lenguaje</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-top card-top4"></div>
-                        <div class="row cleaning">
-                            <div class="col-4 col-md-4 icono">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M39.5833 8.33329H37.5V4.16663H33.3333V8.33329H16.6667V4.16663H12.5V8.33329H10.4167C8.10417 8.33329 6.27083 10.2083 6.27083 12.5L6.25 41.6666C6.25 42.7717 6.68899 43.8315 7.47039 44.6129C8.25179 45.3943 9.3116 45.8333 10.4167 45.8333H39.5833C41.875 45.8333 43.75 43.9583 43.75 41.6666V12.5C43.75 10.2083 41.875 8.33329 39.5833 8.33329ZM39.5833 41.6666H10.4167V20.8333H39.5833V41.6666ZM39.5833 16.6666H10.4167V12.5H39.5833V16.6666ZM18.75 29.1666H14.5833V25H18.75V29.1666ZM27.0833 29.1666H22.9167V25H27.0833V29.1666ZM35.4167 29.1666H31.25V25H35.4167V29.1666ZM18.75 37.5H14.5833V33.3333H18.75V37.5ZM27.0833 37.5H22.9167V33.3333H27.0833V37.5ZM35.4167 37.5H31.25V33.3333H35.4167V37.5Z" fill="#07889B"/>
-                                </svg>
-                            </div>
-                            <div class="col-8 col-md-8 nota">
-                                <div class="row cleaning nota">
-                                    <div class="col-12 col-md-12 cantidad-f">07/04/2024</div>
-                                    <div class="col-12 col-md-12 leyenda">Examen</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row cleaning detalles">
-                            <div class="col-4 col-md-4 detalle">
-                                <p>Vence en <br> dos días</p>
-                            </div>
-                            <div class="col-8 col-md-8 detalle-d">
-                                <p>Materia<br>Matematica</p>
-                            </div>
+                    <div class="col-lg-6 col-md-12 cleaning container-horarios">
+                        <p class="titulo-horarios">Horario de clases 1° grado: semana 5</p>
+                        <div class="imangen-horario">
+                            <img src="../img/horarios.jpg" alt="Horarios" class="img-horario">
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 informes">
-                    <div class="row cleaning">
-                        <div class="col-4 col-md-4 cont-comunicado">
-                            <p class="titulo-comunicado">Comunicados de institución</p>
-                            <div class="imagen-comunicado">
-                                <div class="icono-comunicado">
-                                    <img src="https://s3-alpha-sig.figma.com/img/89dc/8e10/28eeee68df741ede2ca4e869e09f00de?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mMCKZroOHSoWy38t0eWdAF8IS3mxSE5bBZ5J7ktehuSDtM0j1~syORwk-YIYvIZC8Gt17Dvov406QQCJqzxc6CrAFnbDXhflw56JL5Atf6NQ2YAvIi7LfL47scnb5tN5AgNnUiRdqsw1qwMWc6gYtehSNmMW0saXQ6YKp6V3y3w9gS~4KRJX5X1f~-dbVtefMrVWZP75yb-hANkKEFkV-5Q~9h2sRhnPvf3pkris7cVGHINPVrUArI1~RREPWfQ9Fr8LUAnJe90dZqTfwO-zwvTpT-BoHDUuwFFKtnjCl6DAIubWheKfCy1kQ652D1F~4e2zsb1USEicilGBydbogA__" alt="" class="icono-comunicado">
-                                </div>
-                                <div class="detalle-comunicado">
-                                    <div class="row cleaning comunicado"></div>
-                                        <div class="col-12 col-md-12 cleaning txt-comunicado">
-                                            <p class="text-comentary">Para este miércoles 7 de abril se<br> suspende, en todo el territorio nacuil.</p>
-                                        </div>
-                                        <div class="col-12 col-md-12 cleaning leerMas">
-                                            <p>Leer Más</p>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-7 col-md-7 cont-horarios">
-                            <p class="horarios">Horario de clases 1° grado: semana 5</p>
-                            <img src="../img/horario.png" alt="" class="imangen-horario">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-</body>
+            </div>   
+        </section>
+
+        <script src="../js/padre.js"></script>
+    </body>
 </html>
